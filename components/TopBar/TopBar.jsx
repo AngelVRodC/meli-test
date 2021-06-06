@@ -12,7 +12,7 @@ import {
 
 const TopBar = ({ searchFunction }) => {
 
-  const [query, setQuery] = useState('apple');
+  const [query, setQuery] = useState('');
 
   return (
     <GeneralContainer>
