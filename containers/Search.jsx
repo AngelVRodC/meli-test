@@ -15,7 +15,7 @@ const Search = () => {
     <GeneralContainer>
       <TopBar searchFunction={searchFunction} />
       <Container>{JSON.stringify(products)}</Container>
-  </GeneralContainer>
+    </GeneralContainer>
   );
 
 }
