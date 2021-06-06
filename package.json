@@ -1,7 +1,7 @@
 {
   "name": "meli-test",
   "version": "0.1.0",
-  "private": true,
+  "author": "Angel Rodriguez",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +10,11 @@
   "dependencies": {
     "next": "10.2.3",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "react-styled-flexboxgrid": "^3.2.1",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.0"
   }
 }
