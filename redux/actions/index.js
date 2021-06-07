@@ -17,10 +17,11 @@ export const fetchProductsAction = (query) =>
   (dispatch) => {
     fetchProducts(query)
       .then((response) => {
+        console.log(payload);
         const payload = {
           items: response?.results?.slice(0, 4)?.map((item) => serializeProduct(item))
         }
-        console.log(payload);
+        
         dispatch({
           type: FETCH_PRODUCTS_SUCCESS,
           payload

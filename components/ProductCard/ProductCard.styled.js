@@ -10,6 +10,7 @@ export const ProductCardContainer = styled(Row)`
 
 export const PictureContainer = styled(Col)`
   img.product-picture {
+    cursor: pointer;
     width: 160px;
     height: auto;
   }

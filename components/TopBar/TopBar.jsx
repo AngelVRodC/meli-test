@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import {
   MeliLogo,
@@ -10,9 +10,9 @@ import {
   SearchInputContainer,
 } from "./TopBar.styled";
 
-const TopBar = ({ searchFunction }) => {
+const TopBar = ({ onClick }) => {
 
-  const [query, setQuery] = useState('');
+  const [searchValue, setSearchValue] = useState('');
 
   return (
     <GeneralContainer>
@@ -21,13 +21,12 @@ const TopBar = ({ searchFunction }) => {
         <SearchInputContainer>
           <SearchInput
             type="text"
-            value={query}
+            value={searchValue}
             className='search-input'
             placeholder='Nunca dejes de Buscar'
-            onChange={event => setQuery(event.target.value)}
+            onChange={event => setSearchValue(event.target.value)}
           />
-          <SearchIcon onClick={()=> searchFunction(query)} />
-
+          <SearchIcon onClick={()=> onClick(searchValue)} />
         </SearchInputContainer>
       </SearchContainer>
     </GeneralContainer>

@@ -10,6 +10,12 @@ export const GeneralContainer = styled.div`
   justify-content: center;
 `;
 
+export const Shit = styled.div`
+  width: 30px;
+  height: 50px;
+  border: 1px solid green;
+`
+
 export const SearchContainer = styled.div`
   display: flex;
   align-items: center;

@@ -1,4 +1,12 @@
-import { ProductCardContainer, PictureContainer, DescriptionContainer, StatusContainer, FreeShippingIcon } from './ProductCard.styled';
+import Link from 'next/link'
+
+import {
+  StatusContainer,
+  PictureContainer,
+  FreeShippingIcon,
+  ProductCardContainer,
+  DescriptionContainer
+} from './ProductCard.styled';
 
 const ProductCard = ({
   id,
@@ -11,10 +19,12 @@ const ProductCard = ({
   return (
     <ProductCardContainer>
       <PictureContainer md={2} xs={12}>
-        <img
-          src={picture}
-          className='product-picture'
-        />
+        <Link href={`/items/${id}`}>
+          <img
+            src={picture}
+            className='product-picture'
+            />
+          </Link>
       </PictureContainer>
       <DescriptionContainer md={8} xs={12}>
         { free_shipping && <FreeShippingIcon />}
