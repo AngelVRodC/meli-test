@@ -5,7 +5,8 @@ const defaultTheme = {
   },
   assets: {
     meliLogo: 'https://i.ibb.co/4TVj4Pj/Logo-ML.png',
-    searchIcon: 'https://i.ibb.co/hWLDGgX/ic-Search.png'
+    searchIcon: 'https://i.ibb.co/hWLDGgX/ic-Search.png',
+    freeShippingIcon: 'https://i.ibb.co/fpK9gzz/ic-shipping-2x-png-png.png'
   },
   flexboxgrid: {
     gridSize: 12, // columns

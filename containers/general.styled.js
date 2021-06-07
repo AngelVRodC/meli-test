@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Grid, Row } from 'react-styled-flexboxgrid';
+import { Grid } from 'react-styled-flexboxgrid';
 
 
 export const GeneralContainer = styled.div`

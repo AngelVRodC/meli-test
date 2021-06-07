@@ -1,4 +1,6 @@
+import { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import ProductCard from '../components/ProductCard/ProductCard';
 
 import TopBar from '../components/TopBar/TopBar';
 import { fetchProductsAction } from '../redux/actions';
@@ -9,12 +11,16 @@ const Search = () => {
   const dispatch = useDispatch();
   const searchFunction = (query) => dispatch(fetchProductsAction(query));
 
-  const error = useSelector(state => state.error);
-  const products = useSelector(state => state.products);
+  const { items, error, categories, author } = useSelector(state => state);
+
+  const products = useMemo(() =>
+    items.map((item) => <ProductCard key={item.id} {...item} />)
+  , [items])
+
   return (
     <GeneralContainer>
       <TopBar searchFunction={searchFunction} />
-      <Container>{JSON.stringify(products)}</Container>
+      <Container>{products}</Container>
     </GeneralContainer>
   );
 
