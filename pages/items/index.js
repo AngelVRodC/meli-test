@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import SearchItems from '../../containers/SearchItems';
+import SearchItems from '../../containers/SearchItemsContainer';
 
 const Items = () => {
   const router = useRouter();

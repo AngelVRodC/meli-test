@@ -10,5 +10,12 @@ export const GeneralContainer = styled.div`
 
 export const Container = styled(Grid)`
   background-color: #fff;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+`;
+
+export const ErrorContainer = styled.div`
+  color: red;
+  margin: auto;
+  font-size: 14px;
 `;

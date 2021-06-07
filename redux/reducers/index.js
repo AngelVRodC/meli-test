@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS_ERROR, FETCH_PRODUCTS_SUCCESS } from '../actions/types';
+import { FETCH_DATA_ERROR, FETCH_DATA_SUCCESS } from '../actions/types';
 
 const initialState = {
   author: {
@@ -10,14 +10,14 @@ const initialState = {
   error: null
 }
  
-const productsReducer = (state = initialState, action) => {
+const dataReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_PRODUCTS_SUCCESS:
+    case FETCH_DATA_SUCCESS:
       return {
         ...state,
         ...action.payload
       }
-      case FETCH_PRODUCTS_ERROR:
+      case FETCH_DATA_ERROR:
         return {
           ...state,
           error: action.payload
@@ -27,4 +27,4 @@ const productsReducer = (state = initialState, action) => {
   }
 };
 
-export default productsReducer;
+export default dataReducer;

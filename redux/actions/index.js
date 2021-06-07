@@ -1,35 +1,25 @@
-import { fetchProducts } from '../../api';
-import { FETCH_PRODUCTS_ERROR, FETCH_PRODUCTS_SUCCESS } from './types';
+import { fetchData } from '../../api';
+import { serializeProduct } from '../../api/serializers';
+import { FETCH_DATA_ERROR, FETCH_DATA_SUCCESS } from './types';
 
-const serializeProduct = (product) => ({
-  id: product?.id,
-  title: product?.title,
-  picture: product?.thumbnail,
-  condition: product?.condition,
-  free_shipping: product?.shipping?.free_shipping,
-  price: {
-    amount: product?.price,
-    currency: product?.prices?.presentation?.display_currency,
-  }
-})
 
-export const fetchProductsAction = (query) =>
+export const fetchDataAction = (query) =>
   (dispatch) => {
-    fetchProducts(query)
+    fetchData(query)
       .then((response) => {
-        console.log(payload);
         const payload = {
-          items: response?.results?.slice(0, 4)?.map((item) => serializeProduct(item))
+          items: response?.results?.slice(0, 4)?.map((item) => serializeProduct(item)),
+          categories: response?.filters[0]?.values[0]?.path_from_root
         }
         
         dispatch({
-          type: FETCH_PRODUCTS_SUCCESS,
+          type: FETCH_DATA_SUCCESS,
           payload
         })
       })
       .catch((error) => {
         dispatch({
-          type: FETCH_PRODUCTS_ERROR,
+          type: FETCH_DATA_ERROR,
           payload: error.message
         })
       });

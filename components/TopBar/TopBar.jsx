@@ -1,5 +1,6 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   MeliLogo,
@@ -26,10 +27,16 @@ const TopBar = ({ onClick }) => {
             placeholder='Nunca dejes de Buscar'
             onChange={event => setSearchValue(event.target.value)}
           />
-          <SearchIcon onClick={()=> onClick(searchValue)} />
+          <SearchIcon onClick={() => onClick(searchValue)} />
         </SearchInputContainer>
       </SearchContainer>
     </GeneralContainer>
   );
-}
+};
+
+
+TopBar.propTypes = {
+  onClick: PropTypes.func.isRequired
+};
+
 export default TopBar;

@@ -2,6 +2,7 @@ const defaultTheme = {
   colors: {
     primary: '#FFF159',
     secondary: '#EEEEEE',
+    blue: '#2A68C8' // Button Color
   },
   assets: {
     meliLogo: 'https://i.ibb.co/4TVj4Pj/Logo-ML.png',
