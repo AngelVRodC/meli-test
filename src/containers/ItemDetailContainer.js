@@ -36,12 +36,15 @@ const ItemDetailContainer = ({ product, categories, error }) => {
 ItemDetailContainer.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    price:PropTypes.number.isRequired,
+    price: PropTypes.shape({
+      currency: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+    }).isRequired,
     title: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired,
     condition: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    free_shipping: PropTypes.string.isRequired,
+    free_shipping: PropTypes.bool.isRequired,
   }),
   categories: PropTypes.arrayOf(
     PropTypes.shape({

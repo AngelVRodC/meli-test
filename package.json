@@ -9,6 +9,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "jsdom": "^16.6.0",
+    "jsdom-global": "^3.0.2",
     "next": "10.2.3",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
@@ -32,7 +35,8 @@
     "eslint-plugin-react": "^7.20.6",
     "jest": "^27.0.4",
     "jest-enzyme": "^7.1.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "redux-mock-store": "^1.5.4"
   },
   "moduleDirectories": [
     "node_modules",
