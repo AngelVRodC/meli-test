@@ -25,7 +25,7 @@ const ItemDetailContainer = ({ product, categories, error }) => {
         onClick={redirectFunction}
       />
       <Container>
-        <ProductDetail {...product} />
+        {product && <ProductDetail {...product} />}
         {error && <ErrorContainer> {error} </ErrorContainer>}
       </Container>
     </GeneralContainer>

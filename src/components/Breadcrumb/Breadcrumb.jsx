@@ -12,6 +12,7 @@ const Breadcrumb = ({ categories, onClick }) => {
   const renderCategories = useMemo(() => (
     categories?.map((category) =>
       <CategoryName
+        className='category'
         key={category.id}
         onClick={() => onClick(category.name)}
       >

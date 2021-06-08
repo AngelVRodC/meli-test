@@ -33,8 +33,7 @@ const ProductCard = ({
         <div className='title'>{title}</div>
       </DescriptionContainer>
       <StatusContainer md={2} xs={12}>
-       
-        <div>{condition}</div>
+        <div>Condicion: {condition}</div>
       </StatusContainer>
     </ProductCardContainer>
   );

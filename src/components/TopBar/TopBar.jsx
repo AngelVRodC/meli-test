@@ -27,7 +27,7 @@ const TopBar = ({ onClick }) => {
             placeholder='Nunca dejes de Buscar'
             onChange={event => setSearchValue(event.target.value)}
           />
-          <SearchIcon onClick={() => onClick(searchValue)} />
+          <SearchIcon className='search' onClick={() => onClick(searchValue)} />
         </SearchInputContainer>
       </SearchContainer>
     </GeneralContainer>
